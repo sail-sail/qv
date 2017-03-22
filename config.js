@@ -24,10 +24,10 @@ exports.cacheTimeUrl = function(ph) {return 0;}
 exports.sessionId = "header";
 
 //日志配置 lever:日志等级info log error,path日志保存的路径
-exports.log = {lever: "log",path: __dirname+"/../",separate:"yyyy-MM-dd",expire_day:31}
+//exports.log = {lever: "log",path: __dirname+"/../",separate:"yyyy-MM-dd",expire_day:31}
 
 if (process.argv[2]) {
 	var argv = eval('('+process.argv[2]+')');
 	for(var key in argv) exports[key] = argv[key];
 }
-process.title = "lgf";
+process.title = "qv";
