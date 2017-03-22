@@ -1,0 +1,10 @@
+require('shelljs/global');
+var date = new Date();
+var path = require("path");
+var _PROJECT_PATH = path.dirname(__dirname);
+var dateStr = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+"_"+date.getHours()+"-"+date.getMinutes()+"-"+date.getSeconds();
+var pth = _PROJECT_PATH+"/../fam_"+dateStr;
+mkdir("-p",pth);
+var excStr = "cp -r \""+_PROJECT_PATH+"\" \""+pth+"\"";
+exec(excStr);
+console.log(excStr);

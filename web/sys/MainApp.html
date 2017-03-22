@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://www.ccteams.com">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title></title>
+<link href="/css/mui.css" rel="stylesheet" type="text/css"/>
+<link href="/css/core.css" rel="stylesheet" type="text/css"/>
+<link href="/css/mui1.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="/js/res/_resAll.js"></script>
+<script type="text/javascript">
+	window.addEvent("domready",function(){
+		$(document.body).onDrawAsync();
+	});
+</script>
+</head>
+<body h:apply="/sys/MainApp" class="MainApp" h:pg="MainApp">
+<iframe class="downloadIframe" name="_downloadIframe"></iframe>
+<!-- 等待加载图标 -->
+<div h:apply="MdLoading" class="md_loading" style="display:none;">
+	<img alt="loading..." src="/img/md_loading.gif" width="21" height="21"/>
+</div>
+<!-- 提示信息 -->
+<div h:apply="Notice" class="notice">
+	<div class="notice_info" style="display:none;">
+		<div class="notice_title">
+			<div class="notice_close">X</div>
+			<div class="notice_num"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="notice_content_info">
+			提示:<br/>
+			保存成功!<br/>
+		</div>
+	</div>
+</div>
+<!-- 登录超时 -->
+<div class="do_modal_div" style="display: none;z-index: 2000;">
+	<div class="do_modal_win" style="left: 640px; top: 218px; max-width: 1449px; max-height: 786px;z-index: 2001;">
+		<div class="do_modal_titlebar">
+			<div class="do_modal_title"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="confirm_win session_timeout_win" style="height: auto; width: auto;" tabindex="1">
+			<div class="confirm_content">
+				{{@I18NEny.session_timeout_msg}}
+			</div>
+			<div class="confirm_but_div">
+				<button class="confirm_ok">{{@I18NEny.confirm}}</button>
+				<button class="confirm_cancel">{{@I18NEny.cancel}}</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap">
+	<div class="mui-inner-wrap">
+		<aside id="offCanvasSide" class="mui-off-canvas-right">
+			<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+						<li class="mui-table-view-cell">
+							Item 1
+						</li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-back mui-pull-left main_action_back" h:but="back_but"></a>
+			<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+			<h1 class="mui-title main_app_title">系统</h1>
+		</header>
+		<div id="offCanvasContentScroll" class="mui-content" style="top:44px;bottom:0;width:100%;position:absolute;padding-top:0;overflow: auto;">
+			
+		</div>
+		<div class="mui-off-canvas-backdrop"></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://www.ccteams.com">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+<title>销售管理系统</title>
+
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+<link href="/css/mui.css" rel="stylesheet" type="text/css"/>
+<link href="/css/core.css" rel="stylesheet" type="text/css"/>
+<link href="/css/mui1.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+.main_bl_layout>.bl_noth_cont {
+	height: 40px;
+}
+.main_bl_layout>.bl_noth_split {
+	top: 40px;
+}
+.main_bl_layout>.bl_west_cont {
+	width: 150px;
+	bottom:0px;
+	top:46px;
+}
+.main_bl_layout>.bl_west_split {
+	left: 149px;
+	bottom:0px;
+	top:40px;
+}
+.main_bl_layout>.bl_center {
+	left: 155px;
+	bottom:0px;
+	top:46px;
+}
+.main_bl_layout>.bl_noth_cont {
+	background:url(/img/header.gif) repeat-x;
+}
+.main_bl_layout>.bl_noth_cont .mfToolbar {
+	position: absolute;
+	right: 10px;
+	bottom: 1px;
+}
+.main_bl_layout>.bl_noth_cont .mfToolbar .et_psw {
+	margin-right: 10px;
+}
+.main_bl_layout>.bl_noth_cont .mfToolbar .main_pg {
+	margin-right: 10px;
+}
+.main_bl_layout>.bl_noth_cont .mfToolbar_top_right {
+	position: absolute;
+	right: 10px;
+	top: 2px;
+}
+.main_bl_layout>.bl_west_cont .acdin-content {
+	border-bottom-width:0px;
+}
+.menu_tree .tree_li {
+	margin-top: 3px;
+	font-size: 16px;
+	
+}
+.menu_tree .tree_lbl {
+	height: 22px;
+    line-height: 22px;
+}
+</style>
+
+<script type="text/javascript">
+window.__notTouchEvt = true;
+</script>
+<script type="text/javascript" src="/js/res/_resAll.js"></script>
+<script type="text/javascript">
+var url = new URI(location.href);var host = location.hostname;window.ixbupwjj=url.getData().ixbupwjj;if(host!=="localhost"&&host!=="127.0.0.1"&&window.ixbupwjj!==""){var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261081526'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1261081526' type='text/javascript'%3E%3C/script%3E"));}window.addEvent("domready",function(){$(document.body).onDrawAsync();});
+</script>
+
+</head>
+<body h:apply="/sys/MainFrame" class="MainFrame" h:pg="MainFrame">
+
+<iframe class="downloadIframe" name="_downloadIframe"></iframe>
+<a href="#" h:a="reCoreCss" style="display:none;position: fixed;_position: absolute;top:0;left:0;z-index:999;" tabindex="-1">重新加载core.css</a>
+<!-- 等待加载图标 -->
+<div h:apply="MdLoading" class="md_loading" style="display:none;">
+	<img alt="loading..." src="/img/md_loading.gif" width="35" height="35"/>
+</div>
+<!-- 提示信息 -->
+<div h:apply="Notice" class="notice">
+	<div class="notice_info" style="display:none;">
+		<div class="notice_title">
+			<div class="notice_close">X</div>
+			<div class="notice_num"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="notice_content_info">
+			提示:<br/>
+			保存成功!<br/>
+		</div>
+	</div>
+</div>
+<!-- input输入框验证失败框 -->
+<div class="vdt_err_box" style="display:none;"></div>
+
+<!-- 登录超时 -->
+<div class="do_modal_div" style="display: none;z-index: 2000;">
+<div class="do_modal_win" style="left: 640px; top: 218px; max-width: 1449px; max-height: 786px;z-index: 2001;">
+<div class="do_modal_titlebar">
+	<div class="do_modal_title"></div>
+	<div class="clear"></div>
+</div>
+<div class="confirm_win session_timeout_win" style="height: auto; width: auto;" tabindex="1">
+	<div class="confirm_content">
+		{{@I18NEny.session_timeout_msg}}
+	</div>
+	<div class="confirm_but_div">
+		<button class="confirm_ok" style="margin-right:10px;">{{@I18NEny.confirm}}</button>
+		<button class="confirm_cancel">{{@I18NEny.cancel}}</button>
+	</div>
+</div>
+</div>
+</div>
+
+<div h:apply="Bl_layout" class="bl_layout main_bl_layout" style="visibility:hidden;">
+	<div class="bl_noth_colpsd" style="display:none;"></div>
+	<div class="bl_west_colpsd" style="display:none;"></div>
+<!-- 	<div class="bl_east_colpsd" style="display:none;"></div> -->
+	<div class="bl_noth_cont" style="position: relative;">
+		<img style="border:none;position: absolute;top:0;left:40px;height:40px" alt="logo" src="/img/logo.jpg">
+		<h1 style="position: absolute;top: -10px;left:160px">{{@I18NEny.logo_title}}</h1>
+		<div class="mfToolbar_top_right">
+			<label style="text-decoration:underline;color: gray;">{{@I18NEny.current_user}}:</label>
+			<label style="color: blue;font-weight:bold;">{{@usr.code}}</label>
+			<label style="color:gray;font-size:12px;margin-left:6px;">{{@usr.lbl}}</label>
+		</div>
+		<div class="mfToolbar">
+			<a href="javascript:;" class="main_pg" style="display:none;">{{@I18NEny.homepage}}</a>
+			<a href="javascript:;" class="et_psw">{{@I18NEny.edit_password}}</a>
+			<a href="javascript:;" class="fgt_psw" style="margin-right:5px;">忘记密码</a>
+			<a href="javascript:;" class="exit_login">{{@I18NEny.logout}}</a>
+		</div>
+	</div>
+	<div class="bl_noth_split splt_not_mv">
+		<img src="/img/bl_noth_split.png" class="bl_noth_split_img"/>
+	</div>
+	<div class="bl_west_split">
+		<img src="/img/bl_west_split.png" class="bl_west_split_img"/>
+	</div>
+	<div class="bl_west_cont">
+		<div h:apply="Accordion" class="accordion">
+			<!-- 系统菜单 -->
+			<div class="acdin acdin-selected" style="top:0;">
+				{{@I18NEny.system_menu}}
+			</div>
+			<div class="acdin-content acdin-content-selected" style="top:26px;bottom:0px;">
+				<div class="tree menu_tree" h:apply="Tree"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bl_center">
+		<div h:apply="Tabbox" class="tabbox main_tabbox">
+			<div h:apply="Tabs" class="tabs">
+				<div class="clear"></div>
+				<div class="tab_but">
+					<div class="tab_close_but">X</div>
+				</div>
+			</div>
+			<div h:apply="Tabpanels" class="tabpanels">
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+<!-- 	<div class="bl_east_split"> -->
+<!-- 		<img src="/img/bl_east_split.png" class="bl_east_split_img"/> -->
+<!-- 	</div> -->
+<!-- 	<div class="bl_east_cont"> -->
+<!-- 	</div> -->
+<!-- 	<div class="bl_south_split"> -->
+<!-- 		<img src="/img/bl_south_split.png" class="bl_south_split_img"/> -->
+<!-- 	</div> -->
+<!-- 	<div class="bl_south_cont"> -->
+<!-- 		<div style="text-align: center;padding-top: 2px;color: gray;"> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="LoginApp" h:apply="./LoginApp" h:pg="LoginApp" style="display:none;">
+	<div style="margin-top:25px;"></div>
+	<div style="text-align:center;">
+		<div style="width:65%;display:inline-block;">
+			<div style="">
+				<input type="text" class="mui-input-clear mui-input" ms-attr-placeholder="headObj.code"  h:iez="code" h:apply="TextInput">
+			</div>
+			<div style="margin-top:15px;">
+				<input type="password" class="mui-input-clear mui-input" ms-attr-placeholder="headObj.password"  h:iez="password" h:apply="TextInput">
+			</div>
+			<div style="text-align:right;margin-top:15px;">
+				<div style="display:inline-block;position: relative;top:-7px;font-size:16px;color:gray;">自动登录</div>
+				<div class="mui-switch"><div class="mui-switch-handle"></div></div>
+			</div>
+			<div style="margin-top:15px;">
+				<button h:but="commit" class="mui-btn mui-btn-primary" style="width:100%;">登录</button>
+			</div>
+		</div>
+	</div>
+</div>

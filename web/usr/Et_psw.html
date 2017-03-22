@@ -1,0 +1,48 @@
+<div h:apply="./Et_psw" class="SysWin SysAdd Et_psw" h:pg="Et_psw">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="old_psw">{{@headObj.old_psw}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="password" h:iez="old_psw" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+					</td>
+					<td class="iez_td">
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="password">{{@headObj.password}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="password" h:iez="password" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						
+					</td>
+					<td class="iez_td">
+						
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.confirm}}</button>
+	</div>
+</div>

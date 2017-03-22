@@ -1,0 +1,46 @@
+<div h:apply="/menu_lang/Menu_langAdd" class="SysWin SysAdd Menu_langAdd" h:pg="Menu_langAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="_menu_id">{{@headObj._menu_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="menu_id" class="PopInput" readonly="readonly" h:apply="PopInput"
+						h:form_pg="MenuList" h:from_clz="menu.MenuListSrv" h:fld="id" h:lbl_fld="lbl"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="lang">{{@headObj.lang}}:</span>
+					</td>
+					<td>
+						<input type="text" h:iez="lang" h:apply="TextInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="lbl">{{@headObj.lbl}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="lbl" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+					</td>
+					<td>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>

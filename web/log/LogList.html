@@ -1,0 +1,88 @@
+<div h:apply="./LogList" class="SysWin LogList" h:pg="LogList">
+	<div class="grid_div0">
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value="t.pg" h:type="TextInput">{{@headObj.pg}}</option>
+						<option value="t.usr" h:type="TextInput">{{@headObj.usr}}</option>
+						<option value="t.ip" h:type="TextInput">{{@headObj.ip}}</option>
+						<option value="t.act" h:type="TextInput">{{@headObj.act}}</option>
+						<option value="t.bef" h:type="TextInput">{{@headObj.bef}}</option>
+						<option value="t.aft" h:type="TextInput">{{@headObj.aft}}</option>
+						<option value="t.rem" h:type="TextInput">{{@headObj.rem}}</option>
+						<option value="t.create_time" h:type="TextInput">{{@headObj.create_time}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th h:sort_fld="t.pg">
+							<span title="pg">{{@headObj.pg}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.usr">
+							<span title="usr">{{@headObj.usr}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.ip">
+							<span title="ip">{{@headObj.ip}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.act">
+							<span title="act">{{@headObj.act}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th>
+							<span title="bef">{{@headObj.bef}}</span>
+						</th>
+						<th>
+							<span title="aft">{{@headObj.aft}}</span>
+						</th>
+						<th>
+							<span title="rem">{{@headObj.rem}}</span>
+						</th>
+						<th h:sort_fld="t.create_time">
+							<span title="create_time">{{@headObj.create_time}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<select class="pgNumSlt">
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+			</select>
+			<button class="firstPg" h:but="firstPg">{{@I18NEny.first_page}}</button>
+			<button class="prevPg" h:but="prevPg">{{@I18NEny.prev_page}}</button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg">{{@I18NEny.next_page}}</button>
+			<button class="lastPg" h:but="lastPg">{{@I18NEny.last_page}}</button>
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+		</div>
+	</div>
+</div>

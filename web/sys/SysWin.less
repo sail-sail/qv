@@ -1,0 +1,273 @@
+.SysWin {
+	//分页
+	.grid_padding {
+  		background: #F4F4F4;
+  		padding-left: 5px;
+	    padding-top: 2px;
+		padding-bottom: 2px;
+	}
+	//每页显示
+	.pgNumSlt {
+		border-width: 1px;
+  		border-style: solid;
+  		border-color: #CCC;
+  		width: auto;
+	    height: 20px;
+	    font-size: 12px;
+	}
+	button {
+		border-width: 1px;
+  		border-style: solid;
+  		border-color: #CCC;
+		padding: 2px;
+		background-color: #FFF;
+		cursor: pointer;
+		color: black;
+		margin-left: 2px;
+	}
+	button:hover {
+		border-color: black;
+	}
+	.pd_ipt {margin-left: 2px;}
+	.addPg {color:green;}
+	.impxlx {color:green;}
+	.expxlx {color:green;}
+	.pd_ipt {
+		display: inline-block;
+	}
+	.cur_pg {
+		width: 25px;
+		height: 19px;
+//		border-width: 1px;
+//	    border-color: gray;
+//	    border-style: solid;
+	}
+	//表格
+	.grid_div0 {
+		display: inline-block;
+		border-width: 0;
+  		border-style: solid;
+  		border-color: #CCC;
+  		width: 100%;
+	}
+	.grid_div {
+		position: relative;
+	}
+	.grid_swipe_div {
+		text-align:center;
+		padding-top: 1px;
+		padding-bottom: 1px;
+	}
+	.grid_thead {
+		background-color: #DDD;
+		th {
+			border-width: 1px;
+			border-color: #CCC;
+			border-style: solid;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+		th[h\:sort_fld] {
+			cursor: pointer;
+		}
+	}
+	.grid_tbl {
+		width:100%;
+		display: inline-table;
+	}
+	.grid_tbl td {
+		border-width: 1px;
+		border-color: #CCC;
+		border-style: solid;
+		padding-left: 3px;
+	    padding-right: 3px;
+	    padding-bottom: 3px;
+	    padding-top: 3px;
+	    text-align: center;
+	}
+	//数字类型的单元格样式
+	.grid_tbl .number_td {
+		text-align: right;
+	}
+//	.grid_tbl tr:nth-child(even) {
+//		background-color: #EFEFEF;
+//	}
+	.dt_tr:hover {
+		background-color: #eaf2aa;
+		input {
+			background-color: #eaf2aa;
+		}
+	}
+	//选中的行
+	.dt_tr_sld {
+		background-color: lightgray;
+		color: blue;
+		input {
+			background-color: lightgray;
+			color: blue;
+		}
+	}
+	.dt_tr_sld:hover {
+		background-color: lightgray;
+	}
+//	.grid_tbl .dt_tr_sld:nth-child(even) {
+//		background-color: #bce774;
+//	}
+	.slt_th {
+		margin-top: 2px;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+	//删除,修改按钮
+	.optDel,.optEdit {
+		cursor: pointer;
+		width: 32px;
+	    height: 26px;
+	    margin: 0;
+	    padding: 0;
+	    background-color: transparent;
+	}
+	.optEdit {
+		border-width: 1px;
+	    border-color: transparent;
+	    border-style: solid;
+	    color: green;
+	}
+	.optDel {
+		border-width: 1px;
+	    border-color: transparent;
+	    border-style: solid;
+	    color: red;
+	    border-right-color: #CCC;
+	}
+	.optDel[disabled],.optEdit[disabled] {
+		cursor: default;
+	}
+	.optDel:hover,.optEdit:hover {
+		border-color: black;
+	}
+	.optDel[disabled]:hover,.optEdit[disabled]:hover {
+		border-color: transparent;
+	}
+	.grid_tbl .optTd {
+		width: 1px;
+		white-space: nowrap;
+		text-align: center;
+		padding: 0;
+	    border-left-width: 0;
+	}
+	.sltTd,.optLbl,.sltLbl {
+		width: 1px;
+		white-space: nowrap;
+		border-left-width: 0;
+	}
+	.sltCbx {
+		margin-top: 1px;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+	.srch {
+		background: #F4F4F4;
+		position: relative;
+		min-height: 25px;
+		.srch_but {
+			margin-top: 1px;
+			img {
+				width: 14px;
+				height: 14px;
+				position: relative;
+				top: 2px;
+			}
+		}
+		.srch_but:hover {
+			border-color: blue;
+		}
+		.srch_itemArr{
+			display: inline-block;
+			margin-top: 1px;
+			.srch_item {
+				display: inline-block;
+				height: 23px;
+				line-height: 23px;
+				padding: 0 2px 0 2px;
+				border: 1px solid green;
+				cursor: pointer;
+				background: #f3f3f3;
+				margin-left: 1px;
+			}
+			.srch_item_andOr {
+				display: inline-block;
+			}
+			.srch_item_opt {
+				color:green;
+				display: inline-block;
+			}
+			.srch_item_name {
+				display: inline-block;
+			}
+			.srch_item:hover {
+				border-color: #e4393c;
+			    background: #fff;
+			}
+			.srch_item_value {
+				display: inline-block;
+			}
+			.srch_item_li:hover {
+			    background-color: #e4393c;
+			    background-position: 7px -158px
+			}
+		}
+	}
+	._srch_eny_but_active {
+		color: red;
+		border-color: bisque;
+	}
+	._srch_eny_but_active:hover {
+		border-color: red;
+	}
+	//表格排序
+	.dirt_icon {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-repeat: no-repeat;
+		background-image: initial;
+	}
+	.asc_icon {
+		background-image: url('/img/asc.png');
+		float: right;
+	}
+	.desc_icon {
+		background-image: url('/img/desc.png');
+		float: right;
+	}
+	.dirt_icon_hide {
+		display: none;
+	}
+	.Select {
+	}
+	.sld_but_div {
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
+.srch_pop {
+	padding: 10px;
+	.srch_pop_opt {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.srch_value_div {
+		display: inline-block;
+		min-width: 15px;
+	}
+	.srch_pop_item {
+		select {
+			width: auto;
+		}
+		.srch_opt {
+			width: 76px;
+		}
+	}
+}

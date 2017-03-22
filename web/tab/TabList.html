@@ -1,0 +1,78 @@
+<div h:apply="./TabList" class="SysWin TabList" h:pg="TabList">
+	<div class="grid_div0">
+		<!-- 搜索条件 -->
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png">
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value=""></option>
+						<option value="t.code" h:type="TextInput">{{@headObj.code}}</option>
+						<option value="t.lbl" h:type="TextInput">{{@headObj.lbl}}</option>
+						<option value="t.is_log" h:type="Checkbox">{{@headObj.is_log}}</option>
+						<option value="t.create_time" h:type="DateInput">{{@headObj.create_time}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th class="optLbl">{{@headObj.optLbl}}</th>
+						<th h:sort_fld="t.code">
+							<span title="code">{{@headObj.code}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.lbl">
+							<span title="lbl">{{@headObj.lbl}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.is_log">
+							<span title="is_log">{{@headObj.is_log}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.create_time">
+							<span title="create_time">{{@headObj.create_time}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th>
+							<span title="rem">{{@headObj.rem}}</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<select class="pgNumSlt">
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+			</select>
+			<button class="firstPg" h:but="firstPg"></button>
+			<button class="prevPg" h:but="prevPg"></button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg"></button>
+			<button class="lastPg" h:but="lastPg"></button>
+			<button class="refresh" h:but="refresh"></button>
+			<button class="addPg" h:but="addPg"></button>
+		</div>
+	</div>
+</div>

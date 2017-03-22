@@ -1,0 +1,92 @@
+<div h:apply="./MenuAdd" class="SysWin SysAdd MenuAdd" h:pg="./MenuAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="prn_id">{{@headObj.prn_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<div class="combotree" h:apply="ComboTree" h:lbl_fld="lbl">
+							<div class="combotree_input_div">
+								<span class="combotree_addon">
+									<span class="combotree_arrow"></span>
+								</span>
+								<input type="text" h:iez="prn_id" class="combotree_input" h:apply="TextInput"/>
+							</div>
+							<div class="tree combotree_tree" h:apply="Tree" style="display: none;"></div>
+						</div>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="lbl">{{@headObj.lbl}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="lbl" h:apply="TextInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="page_id">{{@headObj.page_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="page_id" class="PopInput" readonly="readonly" h:apply="PopInput"
+						h:form_pg="PageList" h:from_clz="page.PageListSrv" h:fld="id" h:lbl_fld="lbl"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="open_op">{{@headObj.open_op}}:</span>
+					</td>
+					<td class="iez_td">
+						<select h:iez="open_op" h:apply="Select">
+							<option value="tab">tab</option>
+							<option value="modal">modal</option>
+						</select>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="is_root">{{@headObj.is_root}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="checkbox" h:iez="is_root" h:apply="Checkbox"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="is_leaf">{{@headObj.is_leaf}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="checkbox" h:iez="is_leaf" h:apply="Checkbox"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="enable">{{@headObj.enable}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="checkbox" checked h:iez="enable" h:apply="Checkbox"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="enable">{{@headObj.sort_num}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="number" pattern="[0-9]" h:iez="sort_num" h:apply="NumberInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>

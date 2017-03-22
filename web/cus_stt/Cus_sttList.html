@@ -1,0 +1,129 @@
+<div h:apply="./Cus_sttList" class="SysWin Cus_sttList" h:pg="Cus_sttList">
+	<div class="khsjtj_div" style="margin-top:10px;margin-bottom:30px;font-size:20px;">
+		<div style="color:gray;">客户数据统计:</div>
+		<div style="margin-left:10px;">
+			<span>加人数:</span>
+			<input type="number" class="jrs" style="width:70px;font-size:20px;" value="0"/>
+			<span style="margin-left:20px;">时间段:</span>
+			<select class="sjdxz" style="width:70px;font-size:20px;height:auto;">
+				<option value="mrn">早上</option>
+				<option value="aft">下午</option>
+				<option value="ngt">晚上</option>
+			</select>
+			<button h:but="khsj_but" style="margin-left:25px;font-size:20px;color:blue;">添加</button>
+		</div>
+	</div>
+	<div class="grid_div0">
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value="t.dt" h:type="DateInput">{{@headObj.dt}}</option>
+						<option value="u.code" h:type="TextInput">{{@headObj.usr_id}}</option>
+						<option value="t.mrn" h:type="NumberInput">{{@headObj.mrn}}</option>
+						<option value="t.aft" h:type="NumberInput">{{@headObj.aft}}</option>
+						<option value="t.ngt" h:type="NumberInput">{{@headObj.ngt}}</option>
+						<option value="t.no_rpy" h:type="NumberInput">{{@headObj.no_rpy}}</option>
+						<option value="t.black" h:type="NumberInput">{{@headObj.black}}</option>
+						<option value="t.efft" h:type="NumberInput">{{@headObj.efft}}</option>
+						<option value="t.intt" h:type="NumberInput">{{@headObj.intt}}</option>
+						<option value="t.bill" h:type="NumberInput">{{@headObj.bill}}</option>
+						<option value="t.tt_nm" h:type="NumberInput">{{@headObj.tt_nm}}</option>
+						<option value="t.cnv_rt" h:type="NumberInput">{{@headObj.cnv_rt}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="usr1_div">
+			
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th class="optLbl">{{@headObj.optLbl}}</th>
+						<th h:sort_fld="t.dt">
+							<span title="dt">{{@headObj.dt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="u.code">
+							<span title="usr_id">{{@headObj.usr_id}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.mrn">
+							<span title="mrn">{{@headObj.mrn}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.aft">
+							<span title="aft">{{@headObj.aft}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.ngt">
+							<span title="ngt">{{@headObj.ngt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.no_rpy">
+							<span title="no_rpy">{{@headObj.no_rpy}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.black">
+							<span title="black">{{@headObj.black}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.efft">
+							<span title="efft">{{@headObj.efft}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.intt">
+							<span title="intt">{{@headObj.intt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.bill">
+							<span title="bill">{{@headObj.bill}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.tt_nm">
+							<span title="tt_nm">{{@headObj.tt_nm}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.cnv_rt">
+							<span title="cnv_rt">{{@headObj.cnv_rt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<select class="pgNumSlt">
+				<option value="20">20</option>
+				<option value="30" selected="selected">30</option>
+				<option value="50">50</option>
+			</select>
+			<button class="firstPg" h:but="firstPg">{{@I18NEny.first_page}}</button>
+			<button class="prevPg" h:but="prevPg">{{@I18NEny.prev_page}}</button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg">{{@I18NEny.next_page}}</button>
+			<button class="lastPg" h:but="lastPg">{{@I18NEny.last_page}}</button>
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+		</div>
+	</div>
+</div>

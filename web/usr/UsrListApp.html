@@ -1,0 +1,69 @@
+<div h:apply="./UsrListApp" class="SysWin UsrList UsrListApp" h:pg="UsrListApp">
+	<div class="grid_div0">
+		<!-- 搜索条件 -->
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value=""></option>
+						<option value="t.code" h:type="TextInput">{{@headObj.code}}</option>
+						<option value="t.name" h:type="TextInput">{{@headObj.name}}</option>
+						<option value="t.email" h:type="TextInput">{{@headObj.email}}</option>
+						<option value="t.mph" h:type="TextInput">{{@headObj.mph}}</option>
+						<option value="t.wechat" h:type="TextInput">{{@headObj.wechat}}</option>
+						<option value="t.tph" h:type="TextInput">{{@headObj.tph}}</option>
+						<option value="t.create_time" h:type="DateInput">{{@headObj.create_time}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="grid_swipe_div">
+			<button class="swipeleft_but" h:but="swipeleft">&nbsp;&lt;&nbsp;</button>
+			<button class="swiperight_but" h:but="swiperight">&nbsp;&gt;&nbsp;</button>
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th class="optLbl" style="display:none;">{{@headObj.optLbl}}</th>
+						<th h:sort_fld="t.code">
+							<span title="code">{{@headObj.code}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.name">
+							<span title="name">{{@headObj.name}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<button class="firstPg" h:but="firstPg">{{@I18NEny.first_page}}</button>
+			<button class="prevPg" h:but="prevPg">{{@I18NEny.prev_page}}</button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg">{{@I18NEny.next_page}}</button>
+			<button class="lastPg" h:but="lastPg">{{@I18NEny.last_page}}</button>
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+			<button ms-if="usr.code==='admin'" class="addPg" h:but="addPg">{{@I18NEny.add}}</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="Login" h:apply="./Login" h:pg="Login" style="display: none;">
+	<div class="lgt_div">
+		<div class="logo_div">
+			<h1 style="white-space: nowrap;">{{@I18NEny["logo_title"]}}</h1>
+		</div>
+		<table>
+			<tr class="lang_tr" style="display:none;">
+				<td>
+					<select class="text_input Select lang_input" h:iez="lang" h:apply="Select">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td height="10"></td>
+			</tr>
+			<tr class="code_tr">
+				<td><input type="text" class="text_input code_input" h:iez="code" h:apply="TextInput" ms-attr="{placeholder:@headObj.code}"/></td>
+			</tr>
+			<tr>
+				<td height="10">
+				</td>
+			</tr>
+			<tr class="pwd_tr">
+				<td><input type="password" class="text_input pwd_input" h:iez="password" h:apply="TextInput" ms-attr="{placeholder:@headObj.password}"/></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">
+					<div style="display:inline-block;position: relative;top:-7px;font-size:16px;color:gray;">自动登录</div>
+					<div class="mui-switch mui-active rembPhone"><div class="mui-switch-handle"></div></div>
+				</td>
+			</tr>
+			<tr>
+				<td height="10">
+				</td>
+			</tr>
+			<tr>
+				<td class="cmt_td">
+					<button class="sl_but cmt_but" h:but="commit">{{@I18NEny.login}}</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

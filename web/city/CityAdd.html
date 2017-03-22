@@ -1,0 +1,46 @@
+<div h:apply="./CityAdd" class="SysWin SysAdd CityAdd" h:pg="CityAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="provin_id">{{@headObj.provin_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<select h:iez="provin_id" h:apply="Select" class="Select"></select>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="lbl">{{@headObj.lbl}}:</span>
+					</td>
+					<td>
+						<input type="text" h:iez="lbl" h:apply="TextInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="rem">{{@headObj.rem}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="rem" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						
+					</td>
+					<td>
+						
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div h:apply="./Mth_tgAdd" class="SysWin SysAdd Mth_tgAdd" h:pg="Mth_tgAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="usr_id">{{@headObj.usr_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="usr_id" h:apply="PopInput"
+						h:form_pg="UsrList" h:from_clz="usr.UsrListSrv" h:fld="id" h:lbl_fld="code"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="pn_tg">{{@headObj.pn_tg}}:</span>
+					</td>
+					<td>
+						<input type="number" h:iez="pn_tg" h:apply="NumberInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="tm_tg">{{@headObj.tm_tg}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="number" h:iez="tm_tg" h:apply="NumberInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						
+					</td>
+					<td>
+						
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>

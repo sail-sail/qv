@@ -1,0 +1,53 @@
+<div h:apply="./SodAdd" class="SysWin SysAdd SodAdd" h:pg="SodAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="so_id">{{@headObj.so_id}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="so_id" class="PopInput" h:apply="PopInput"
+						h:form_pg="SoList" h:from_clz="so.SoListSrv" h:fld="id" h:lbl_fld="id"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="pt_id">{{@headObj.pt_id}}:</span>
+					</td>
+					<td>
+<!-- 						<input type="text" h:iez="pt_id" class="PopInput" h:apply="PopInput" -->
+<!-- 						h:form_pg="PtList" h:from_clz="pt.PtListSrv" h:fld="id" h:lbl_fld="lbl"/> -->
+						<select h:iez="pt_id" h:apply="Select" class="Select">
+						</select>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="pt_sc_id">{{@headObj.pt_sc_id}}:</span>
+					</td>
+					<td class="iez_td">
+<!-- 						<input type="text" h:iez="pt_sc_id" class="PopInput" h:apply="PopInput" -->
+<!-- 						h:form_pg="Pt_scList" h:from_clz="pt_sc.Pt_scListSrv" h:fld="id" h:lbl_fld="lbl"/> -->
+						<select h:iez="pt_sc_id" h:apply="Select" class="Select">
+						</select>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="qty">{{@headObj.qty}}:</span>
+					</td>
+					<td>
+						<input type="number" h:iez="qty" h:apply="NumberInput" value="1"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<div h:apply="./PtT2" class="SysWin SysT2 PtT2" h:pg="PtT2">
+	<div h:include="./PtList.html"></div>
+	<div h:apply="Tabbox" class="tabbox" ms-visible="@sld_eny.id">
+		<div h:apply="Tabs" class="tabs">
+			<div class="clear"></div>
+			<div h:apply="Tab" class="tab tab-close tab-selected">
+				<span class="tab-label" ms-attr="{title:'产品 '+@sld_eny.lbl+' 的规格'}">{{'产品 '+@sld_eny.lbl+' 的规格'}}</span>
+			</div>
+		</div>
+		<div h:apply="Tabpanels" class="tabpanels">
+			<div class="clear"></div>
+			<div h:apply="Tabpanel" class="tabpanel tabpanel-selected">
+				<div h:include="../pt_sc/Pt_scList.html"></div>
+			</div>
+		</div>
+	</div>
+</div>

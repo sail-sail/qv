@@ -1,0 +1,110 @@
+<div h:apply="./AchtList" class="SysWin AchtList" h:pg="AchtList">
+	<div>
+		<h3>
+			<span ms-visible="@usr._role.id!==2">
+				<span style="">团队业绩: </span>
+				<span style="color:red;">{{@eny2.amt_all}}</span><span> 元, </span>
+				<span>目标 </span><span style="color:red;">{{@eny2.mth_tg_amt}}</span><span> 元</span>
+			</span>
+		</h3>
+		<h3>
+			<span style="">个人业绩: </span>
+			<span style="color:red;">{{@eny2.amt_usr}}</span><span> 元, </span>
+			<span>目标 </span><span style="color:red;">{{@eny2.mth_tg_usr}}</span><span> 元</span>
+		</h3>
+	</div>
+	<div class="grid_div0">
+		<div style="margin-top: 5px;margin-bottom: 5px;">
+			<span>开始日期:</span><input type="date" class="begin_date"/>
+			<span style="margin-left: 15px;">结束日期:</span><input type="date" class="end_date"/>
+			<button style="margin-left: 15px;" class="srch_but1">查询</button>
+		</div>
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value="t.create_time" h:type="DateInput">{{@headObj.create_time}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="usr1_div">
+			
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th>
+							<span title="usr">{{@headObj.usr}}</span>
+						</th>
+						<th>
+							<span title="count">{{@headObj.count}}</span>
+						</th>
+						<th>
+							<span title="xindan">{{@headObj.xindan}}</span>
+						</th>
+						<th>
+							<span title="xudan">{{@headObj.xudan}}</span>
+						</th>
+						<th>
+							<span title="amt">{{@headObj.amt}}</span>
+						</th>
+						<th>
+							<span title="wechat">{{@headObj.wechat}}</span>
+						</th>
+						<th>
+							<span title="alipay">{{@headObj.alipay}}</span>
+						</th>
+						<th>
+							<span title="trust_amt">{{@headObj.trust_amt}}</span>
+						</th>
+						<th>
+							<span title="icbc">{{@headObj.icbc}}</span>
+						</th>
+						<th>
+							<span title="postal">{{@headObj.postal}}</span>
+						</th>
+						<th>
+							<span title="arrear">{{@headObj.arrear}}</span>
+						</th>
+						<th>
+							<span title="rn_gd">{{@headObj.rn_gd}}</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+			<div style="display: inline-block;">
+				<div style="display: inline-block;margin-left:30px;">
+					<span>总单数:</span>
+					<span style="color:blue;">{{@eny2.count_sum}}</span>
+					<span> 单</span>
+				</div>
+				<div style="display: inline-block;margin-left:20px;">
+					<span>总业绩:</span>
+					<span style="color:blue;">{{@eny2.amt_sum}}</span>
+					<span> 元</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

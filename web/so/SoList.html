@@ -1,0 +1,149 @@
+<div h:apply="./SoList" class="SysWin SoList" h:pg="SoList">
+	<!-- 财务每天已核统计 -->
+	<fieldset style="margin-top: 5px;margin-bottom: 5px;display:inline-block;margin-left: 15px;">
+		<legend style="color: gray;">财务按天已核</legend>
+		<div class="acc_day_ttl">
+			<span style="color: blue;">日期:</span>
+			<input type="date" class="acc_date" style="border: none;width: auto;"/>
+			<span style="color: blue;margin-left:15px;" class="">合计金额:</span>
+			<span style="color: red;"> ¥</span>
+			<span style="color: red;" class="acc_span">0</span>
+		</div>
+	</fieldset>
+	<div class="grid_div0">
+		<!-- 搜索条件 -->
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value="t.acc_state" h:type="TextInput" class="acc_state_srch">{{@headObj.acc_state}}</option>
+						<option value="t.crr_state" h:type="TextInput" class="crr_state_srch">{{@headObj.crr_state}}</option>
+						<option value="t.state" h:type="TextInput">{{@headObj.state}}</option>
+						<option value="t.cr_no" h:type="TextInput">{{@headObj.cr_no}}</option>
+						<option value="t.id" h:type="TextInput">{{@headObj.id}}</option>
+						<option ms-if="@usr._role.id!==1" value="u.code" h:type="TextInput">{{@headObj.usr_id}}</option>
+						<option ms-if="@usr._role.id===1" value="u2.code" h:type="TextInput">{{@headObj.usr_id}}</option>
+						<option value="t.cm_nm" h:type="TextInput">{{@headObj.cm_nm}}</option>
+						<option value="c.lbl" h:type="TextInput">{{@headObj.courier_id}}</option>
+						<option value="pt.lbl" h:type="TextInput">{{@headObj.pay_type_id}}</option>
+						<option value="t.amt" h:type="NumberInput">{{@headObj.amt}}</option>
+						<option value="t.trust_amt" h:type="NumberInput">{{@headObj.trust_amt}}</option>
+						<option value="t.mbp" h:type="TextInput">{{@headObj.mbp}}</option>
+						<option value="t.addr" h:type="TextInput">{{@headObj.addr}}</option>
+						<option value="t.create_time" h:type="DateInput">{{@headObj.create_time}}</option>
+						<option value="t.create_usr" h:type="TextInput">{{@headObj.create_usr}}</option>
+						<option value="t.rem" h:type="TextInput">{{@headObj.rem}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div style="margin-top: 5px;margin-bottom: 5px;">
+			<span>单号:</span><input type="text" class="srch_cr_no" style="width: 95px; border: none;"/>
+			<button style="margin-left: 15px;" h:but="srch_but1">查询</button>
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th class="optLbl">{{@headObj.optLbl}}</th>
+						<th h:sort_fld="t.acc_state" class="acc_state_th" style="width: 42px;">
+							<span title="acc_state">{{@headObj.acc_state}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.crr_state" class="crr_state_th" style="width: 42px;">
+							<span title="crr_state">{{@headObj.crr_state}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.cr_no">
+							<span title="cr_no">{{@headObj.cr_no}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.state">
+							<span title="state">{{@headObj.state}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="u.code">
+							<span title="usr_id">{{@headObj.usr_id}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.cm_nm">
+							<span title="cm_nm">{{@headObj.cm_nm}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="c.lbl">
+							<span title="courier_id">{{@headObj.courier_id}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="pt.lbl">
+							<span title="pay_type_id">{{@headObj.pay_type_id}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.amt">
+							<span title="amt">{{@headObj.amt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.trust_amt">
+							<span title="trust_amt">{{@headObj.trust_amt}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.mbp">
+							<span title="mbp">{{@headObj.mbp}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th>
+							<span title="_sodEnyArr">{{@headObj._sodEnyArr}}</span>
+						</th>
+						<th h:sort_fld="t.addr">
+							<span title="addr">{{@headObj.addr}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.create_time">
+							<span title="create_time">{{@headObj.create_time}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th h:sort_fld="t.create_usr">
+							<span title="create_usr">{{@headObj.create_usr}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th>
+							<span title="rem">{{@headObj.rem}}</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<select class="pgNumSlt">
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="50">50</option>
+			</select>
+			<button class="firstPg" h:but="firstPg">{{@I18NEny.first_page}}</button>
+			<button class="prevPg" h:but="prevPg">{{@I18NEny.prev_page}}</button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg">{{@I18NEny.next_page}}</button>
+			<button class="lastPg" h:but="lastPg">{{@I18NEny.last_page}}</button>
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+			<button class="addPg" h:but="addPg">{{@I18NEny.add}}</button>
+			<button ms-if="@usr.code==='admin' || @usr._role.id===3" class="shunfengTpl" h:but="shunfengTpl" style="margin-left:20px;color:blue;">顺丰未发货订单</button>
+		</div>
+	</div>
+</div>

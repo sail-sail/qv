@@ -1,0 +1,62 @@
+<div h:apply="./CourierList" class="SysWin CourierList" h:pg="CourierList">
+	<div class="grid_div0">
+		<div class="srch">
+			<button class="srch_but">
+				<img src="/img/search.png" />
+			</button>
+			<div class="srch_itemArr"></div>
+			<div class="srch_pop" style="display:none;">
+				<div class="srch_pop_item">
+					<select class="srch_and">
+						<option value="and">{{@I18NEny.and}}</option>
+						<option value="or">{{@I18NEny.or}}</option>
+					</select>
+					<select class="srch_name">
+						<option value="t.lbl" h:type="TextInput">{{@headObj.lbl}}</option>
+						<option value="t.rem" h:type="TextInput">{{@headObj.rem}}</option>
+					</select>
+					<select class="srch_opt"></select>
+					<div class="srch_value_div"></div>
+				</div>
+				<div class="srch_pop_opt">
+					<button class="srch_cfm">{{@I18NEny.confirm}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="grid_div">
+			<table class="grid_tbl">
+				<thead class="grid_thead">
+					<tr>
+						<th class="optLbl">{{@headObj.optLbl}}</th>
+						<th h:sort_fld="t.lbl">
+							<span title="lbl">{{@headObj.lbl}}</span>
+							<div class="dirt_icon" style="display: none;"></div>
+						</th>
+						<th>
+							<span title="rem">{{@headObj.rem}}</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="grid_padding">
+			<select class="pgNumSlt">
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+			</select>
+			<button class="firstPg" h:but="firstPg">{{@I18NEny.first_page}}</button>
+			<button class="prevPg" h:but="prevPg">{{@I18NEny.prev_page}}</button>
+			<div class="pd_ipt">
+				<input type="text" class="cur_pg" value="1"/><span>/</span><span class="ttl_pg">1</span>
+			</div>
+			<button class="nextPg" h:but="nextPg">{{@I18NEny.next_page}}</button>
+			<button class="lastPg" h:but="lastPg">{{@I18NEny.last_page}}</button>
+			<button class="refresh" h:but="refresh">{{@I18NEny.refresh}}</button>
+			<button class="addPg" h:but="addPg">{{@I18NEny.add}}</button>
+		</div>
+	</div>
+</div>

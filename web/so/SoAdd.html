@@ -1,0 +1,171 @@
+<div h:apply="./SoAdd" class="SysWin SysAdd SoAdd" h:pg="SoAdd" tabindex="1">
+	<div class="add_table0_div">
+		<table class="add_table0">
+			<tbody>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="id">{{@headObj.id}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="id" readonly="readonly" h:apply="TextInput" placeholder="(系统生成)"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+					</td>
+					<td>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="cr_no">{{@headObj.cr_no}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="cr_no" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="state">{{@headObj.state}}:</span>
+					</td>
+					<td>
+						<select h:iez="state" h:apply="Select" class="Select">
+							<option value="未发货">未发货</option>
+							<option value="已发货">已发货</option>
+						</select>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="cm_nm">{{@headObj.cm_nm}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="cm_nm" h:apply="TextInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="courier_id">{{@headObj.courier_id}}:</span>
+					</td>
+					<td>
+<!-- 						<input type="text" h:iez="courier_id" class="PopInput" h:apply="PopInput" value="顺丰" -->
+<!-- 						h:form_pg="CourierList" h:from_clz="courier.CourierListSrv" h:fld="id" h:lbl_fld="lbl"/> -->
+						<select  h:iez="courier_id" h:apply="Select" class="Select" value="顺丰">
+						</select>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="pay_type_id">{{@headObj.pay_type_id}}:</span>
+					</td>
+					<td class="iez_td">
+<!-- 						<input type="text" h:iez="pay_type_id" h:apply="PopInput" value="微信" -->
+<!-- 						h:form_pg="Pay_typeList" h:from_clz="pay_type.Pay_typeListSrv" h:fld="id" h:lbl_fld="lbl"/> -->
+						<select  h:iez="pay_type_id" h:apply="Select" class="Select" value="微信">
+						</select>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="amt">{{@headObj.amt}}:</span>
+					</td>
+					<td>
+						<input type="number" h:iez="amt" h:apply="NumberInput" class="NumberInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="trust_amt">{{@headObj.trust_amt}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="number" h:iez="trust_amt" h:apply="NumberInput" class="NumberInput"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="mbp">{{@headObj.mbp}}:</span>
+					</td>
+					<td>
+						<input type="number" h:iez="mbp" h:apply="NumberInput"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="cy_thg">{{@headObj.cy_thg}}:</span>
+					</td>
+					<td class="iez_td">
+						<input type="text" h:iez="cy_thg" h:apply="TextInput" class="TextInput" maxlength="70" value="茶叶"/>
+					</td>
+					<td class="spanl_td"></td>
+					<td class="lbl_td">
+						<span h:lbl="qk">{{@headObj.qk}}:</span>
+					</td>
+					<td>
+						<input type="checkbox" h:iez="qk" h:apply="Checkbox" class="Checkbox"/>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="addr">{{@headObj.addr}}:</span>
+					</td>
+					<td class="iez_td" colspan="4">
+						<textarea h:iez="addr" h:apply="TextInput" rows="5" style="width:400px;"></textarea>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span h:lbl="rem">{{@headObj.rem}}:</span>
+					</td>
+					<td class="iez_td" colspan="4">
+						<textarea h:iez="rem" h:apply="TextInput" rows="3" style="width:400px;"></textarea>
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+				<tr>
+					<td class="lbl_td">
+						<span>快捷键:</span>
+					</td>
+					<td class="iez_td qk_rm_div" colspan="4">
+						
+					</td>
+					<td class="span2_td"></td>
+				</tr>
+				<tr><td colspan="6" class="span_tr"></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="sod_list_div" style="margin-bottom: 25px;">
+		<div>
+			<table class="sod_list_tbl" border="1" style="width: 100%;">
+				<thead style="background-color: #DDD;">
+					<tr>
+						<th>操作</th>
+						<th>产品</th>
+						<th>规格</th>
+						<th>数量</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<div style="text-align: left;margin-top: 5px;margin-left: 3px;">
+			<button class="sod_add_row" h:but="sod_add_row">增加产品</button>
+		</div>
+	</div>
+	<div class="add_but_div">
+		<button class="cancelBut" h:but="cancelBut">{{@I18NEny.cancel}}</button>
+		<button class="confirmBut" h:but="confirmBut">{{@I18NEny.save}}</button>
+	</div>
+</div>
